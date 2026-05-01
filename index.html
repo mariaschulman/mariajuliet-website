@@ -373,6 +373,55 @@
     .about-link:hover { color: var(--charcoal); }
 
     /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       PRIVATE SESSIONS SECTION
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    .private-section { background: var(--cream); }
+    .private-inner {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 5rem;
+      align-items: start;
+    }
+    .private-header {
+      position: sticky;
+      top: 100px;
+    }
+    .private-label {
+      font-size: .75rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--taupe);
+      font-weight: 500;
+      margin-bottom: .85rem;
+    }
+    .private-header h2 {
+      color: var(--charcoal);
+      margin-bottom: 1.5rem;
+    }
+    .private-header h2 em {
+      font-style: normal;
+      color: var(--terracotta);
+    }
+    .private-header .lead {
+      color: var(--taupe);
+      font-size: .975rem;
+      margin-bottom: 2rem;
+    }
+    .private-content p {
+      color: #4a4846;
+      margin-bottom: 1.4rem;
+      font-size: 1rem;
+      line-height: 1.78;
+    }
+    .private-content p:last-child { margin-bottom: 0; }
+    .private-divider {
+      width: 40px;
+      height: 1.5px;
+      background: var(--gold);
+      margin: 2.5rem 0;
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
        FULL WIDTH BANNER
     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
     .banner {
@@ -690,6 +739,8 @@
       .offer-grid { grid-template-columns: repeat(2, 1fr); }
       .about-inner { grid-template-columns: 1fr; gap: 2.5rem; }
       .about-image { max-width: 360px; }
+      .private-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+      .private-header { position: static; }
       .cta-grid { grid-template-columns: 1fr; }
       .trio-grid { grid-template-columns: repeat(3, 1fr); }
       .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
@@ -828,7 +879,7 @@
         <a href="#classes" class="offer-link">View schedule ›</a>
       </div>
 
-      <div class="offer-tile" id="private">
+      <div class="offer-tile">
         <div class="offer-icon">
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
             <circle cx="10" cy="5.5" r="2.5" stroke="#7A5C44" stroke-width="1.4"/>
@@ -838,7 +889,7 @@
         </div>
         <h3>Private Sessions</h3>
         <p>One-on-one sessions designed around your body, your goals, and your schedule — in-home, studio, or Zoom.</p>
-        <a href="https://cal.com/mariajuliet/personal-yoga" target="_blank" class="offer-link">Book a session ›</a>
+        <a href="#private" class="offer-link">Learn more ›</a>
       </div>
 
       <div class="offer-tile">
@@ -874,6 +925,58 @@
 
 
 <!-- ═══════════════════════════════
+     PRIVATE SESSIONS
+═══════════════════════════════ -->
+<section class="private-section section-pad" id="private">
+  <div class="container">
+    <div class="private-inner">
+
+      <div class="private-header">
+        <p class="private-label">Private Sessions</p>
+        <h2>Yoga on <em>your terms</em></h2>
+        <p class="lead">
+          One-on-one sessions, designed around your body, your goals, and the
+          time you actually have. In-home, online, or in studio.
+        </p>
+        <a href="https://cal.com/mariajuliet/personal-yoga" target="_blank" class="btn btn-charcoal btn-sm" style="color: var(--cream);">
+          Start the conversation
+        </a>
+      </div>
+
+      <div class="private-content">
+        <p>
+          Most people come to me because they want yoga on their terms — at home,
+          on Zoom, or squeezed between the things their day actually demands.
+          They're not looking for a drop-in class where they follow along and
+          hope it applies to them. They want an hour that meets them where they are.
+        </p>
+
+        <p>
+          I show up with a plan, and then I ask how you're doing — and the plan
+          changes from there. Sessions can be deeply restorative: mostly floor
+          work, slow breath, attention to the places that hold tension (neck,
+          shoulders, jaw, hips, feet). Or they can be vigorous — strong core
+          work, arm balances, a practice that builds heat. Often it's both,
+          over time, depending on what your body needs that week.
+        </p>
+
+        <div class="private-divider"></div>
+
+        <p>
+          If you come regularly, I'll build in enough consistency that you start
+          to own small pieces of the practice yourself — a sequence you can
+          return to between sessions, or a clearer sense of what's happening in
+          a pose you've been working on in a group class. The goal, ultimately,
+          is for you to need me less.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════
      ABOUT STRIP
 ═══════════════════════════════ -->
 <section class="about section-pad" id="about">
@@ -885,23 +988,16 @@
       </div>
 
       <div class="about-content" id="philosophy">
-        <p class="about-label">About &amp; Philosophy</p>
-        <h2>Fourteen years of practice,<br><em>always a student</em></h2>
+        <p class="about-label">Background &amp; Training</p>
+        <h2>A practice built on<br><em>breadth</em></h2>
         <p>
-          I came to yoga looking for something I couldn't quite name. What I found was
-          a practice that asked me to slow down, pay attention, and trust the body's
-          own intelligence. That curiosity has never left.
-        </p>
-        <p>
-          My teaching draws from Ashtanga lineage and rocket yoga, balanced with a
-          deep interest in how bodies actually work — their asymmetries, histories,
-          and the stories they carry. Classes are physically honest and internally
-          spacious: challenging when that's useful, quiet when that's more so.
-        </p>
-        <p>
-          I believe the work of yoga is less about what a pose looks like and more
-          about what it teaches you to feel. Whether you've practiced for twenty years
-          or stepped onto a mat for the first time last month, you belong here.
+          I teach a range of styles because I don't believe in one-size-fits-all
+          yoga — and because what a body needs at one season of life is rarely
+          what it needs at another. In every class and private session, my aim is
+          to give students a solid foundation: something they can stand on, return
+          to, and build from. But the foundation is just the beginning. I love
+          repetition and routine, and I also love the moment when practice opens
+          into something unexpected.
         </p>
         <a href="#contact" class="about-link">Say hello →</a>
       </div>
@@ -933,18 +1029,12 @@
 
     <div class="trio-item">
       <img class="trio-photo" src="images/Side+Plank+Tree.jpeg" alt="Side plank tree pose" />
-      <div class="trio-item-label">On the hill</div>
-    </div>
 
     <div class="trio-item">
       <img class="trio-photo" src="images/Maria-FlipDog.jpeg" alt="Maria in flip dog pose" />
-      <div class="trio-item-label">In the forest</div>
-    </div>
 
     <div class="trio-item">
       <img class="trio-photo" src="images/IMG_3165-edit.jpeg" alt="Yoga practice" />
-      <div class="trio-item-label">In the studio</div>
-    </div>
 
   </div>
 </section>
@@ -1041,9 +1131,12 @@
           practice, or simply want the full attention of a dedicated session —
           private work creates change quickly.
         </p>
-        <div>
-          <a href="https://cal.com/mariajuliet/personal-yoga" target="_blank" class="btn btn-charcoal" style="color: var(--cream);">
-            Start the conversation
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+          <a href="https://cal.com/mariajuliet/personal-yoga" class="btn btn-charcoal" style="color: var(--cream);">
+            Book a Zoom session
+          </a>
+          <a href="mailto:maria@mariajuliet.com" class="btn btn-outline-dark">
+            Get in touch
           </a>
         </div>
       </div>
@@ -1113,7 +1206,7 @@
     <div class="footer-bottom">
       <p class="footer-copy">© 2026 Maria Juliet Schulman. All rights reserved.</p>
       <div class="footer-social">
-        <a href="#" aria-label="Instagram">
+        <a href="https://instagram.com/mariajulietschulman" target="_blank" aria-label="Instagram">
           <svg width="15" height="15" viewBox="0 0 15 15" fill="none">
             <rect x="1.5" y="1.5" width="12" height="12" rx="3.5" stroke="currentColor" stroke-width="1.3" fill="none"/>
             <circle cx="7.5" cy="7.5" r="2.8" stroke="currentColor" stroke-width="1.3" fill="none"/>
